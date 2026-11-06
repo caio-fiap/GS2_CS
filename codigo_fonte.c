@@ -2,7 +2,7 @@
 #include <string.h>
 
 int expressao_simplificada(int a, int b, int c, int d) {
-    return (a && !b && d) || (!b && c && d);
+    return (!b && d)&&(a||c);
 }
 
 int ler_bit(const char *pergunta) {
@@ -79,7 +79,7 @@ void consultar(void) {
         printf("\nSIM: pelas informacoes fornecidas, voce parece reunir as\n");
         printf("condicoes para iniciar o processo de passaporte.\n");
     } else {
-        printf("\n: pelas informacoes fornecidas, voce ainda nao parece\n");
+        printf("\nNAO: pelas informacoes fornecidas, voce ainda nao parece\n");
         printf("reunir as condicoes para iniciar o processo.\n");
         if (b) printf(" - Ha pendencia eleitoral a resolver.\n");
         if (!d) printf(" - Faltam documentos basicos.\n");
